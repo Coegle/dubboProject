@@ -16,9 +16,13 @@ final class DaemonComponent: DisposableBean {
     @PostConstruct
     fun run() {
         CoroutineScope(Dispatchers.Default).launch {
-            genericCallService.invoke(GenericCall("com.gmair.schedproject.TestInterface",
-                "message",
-                "com.gmair.schedproject.GenericCallParams", "{\"id\": 5}"))
+            repeat(3) {
+                launch {
+                    genericCallService.invoke(GenericCall("com.gmair.schedproject.TestInterface",
+                        "message",
+                        "com.gmair.schedproject.GenericCallParams", "{\"id\": $it}"))
+                }
+            }
         }
     }
 

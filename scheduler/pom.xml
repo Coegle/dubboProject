@@ -33,12 +33,6 @@
             <type>pom</type>
         </dependency>
 
-        <!-- dubbo starter -->
-        <dependency>
-            <groupId>org.apache.dubbo</groupId>
-            <artifactId>dubbo-spring-boot-starter</artifactId>
-        </dependency>
-
         <!-- spring starter -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
