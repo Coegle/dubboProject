@@ -1,2 +1,8 @@
 ## Project Structure
-scheduler.service.DaemonComponent create a daemon coroutine to make generic call.
+- scheduler module
+    consumer module
+    scheduler.service.DaemonComponent create a daemon coroutine to make generic call.
+
+- test-provider module
+    provider module
+    
